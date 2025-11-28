@@ -183,8 +183,9 @@ cd QuizReward-DApp
  Create a .env file in the root of your Hardhat project:
 
 
-HOODI_URL=https://eth-hoodi.g.alchemy.com/v2/E_22OzI2TfxmRHgCa57Kf
-HOODI_PRIVATE_KEY=YOUR_METAMASK_PRIVATE_KEY_HERE
+         HOODI_URL=https://eth-hoodi.g.alchemy.com/v2/E_22OzI2TfxmRHgCa57Kf
+
+         HOODI_PRIVATE_KEY=YOUR_METAMASK_PRIVATE_KEY_HERE
 
 
 🛠 4. Compile Smart Contracts
@@ -226,5 +227,4 @@ HOODI_PRIVATE_KEY=YOUR_METAMASK_PRIVATE_KEY_HERE
 8. ▶️  Run the Frontend Development Server:
 
 
-
-     npm run dev
+       npm run dev
