@@ -163,7 +163,7 @@ constructor(): Deploys a new RewardToken contract upon deployment of QuizReward 
 🔧 1. Clone the Repository
 
 
-git clone https://github.com/Sreeshna22/QuizReward-DApp.git cd QuizReward-DApp
+        git clone https://github.com/Sreeshna22/QuizReward-DApp.git cd QuizReward-DApp
 
 
 cd QuizReward-DApp
@@ -172,8 +172,9 @@ cd QuizReward-DApp
 
 🔍 2. Install Hardhat dependencies:
 
-
-npm install
+     
+     
+     npm install
 
 
 
@@ -189,13 +190,14 @@ HOODI_PRIVATE_KEY=YOUR_METAMASK_PRIVATE_KEY_HERE
 🛠 4. Compile Smart Contracts
 
 
-npx hardhat compile
+          npx hardhat compile
 
 
 🚀 5. Deploy Smart Contracts to Hoodi Network
 
 
-npx hardhat ignition deploy ignition/modules/QuizReward.ts --network hoodi
+
+        npx hardhat ignition deploy ignition/modules/QuizReward.ts --network hoodi
 
 
 
@@ -205,7 +207,7 @@ npx hardhat ignition deploy ignition/modules/QuizReward.ts --network hoodi
 6  ♻️ Navigate to the  QuizReward DApp frontend directory:
 
 
-cd  QuizReward DApp fronten
+       cd  QuizReward DApp fronten
 
 
 
@@ -225,4 +227,4 @@ cd  QuizReward DApp fronten
 
 
 
-npm run dev
+     npm run dev
