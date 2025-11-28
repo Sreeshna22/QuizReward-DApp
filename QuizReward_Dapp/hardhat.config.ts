@@ -1,0 +1,107 @@
+// import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
+// import { configVariable, defineConfig } from "hardhat/config";
+
+// export default defineConfig({
+//   plugins: [hardhatToolboxViemPlugin],
+//   solidity: {
+//     profiles: {
+//       default: {
+//         version: "0.8.30",
+//       },
+//       production: {
+//         version: "0.8.30",
+//         settings: {
+//           optimizer: {
+//             enabled: true,
+//             runs: 200,
+//           },
+//         },
+//       },
+//     },
+//   },
+//   networks: {
+//     hardhatMainnet: {
+//       type: "edr-simulated",
+//       chainType: "l1",
+//     },
+//     hardhatOp: {
+//       type: "edr-simulated",
+//       chainType: "op",
+
+//     },
+
+
+//      localhost:{
+//       type :"http",
+//       chainType :"generic",
+//       url:"http://127.0.0.1:8545/",
+//     },
+//     sepolia: {
+//       type: "http",
+//       chainType: "l1",
+//       url: configVariable("SEPOLIA_RPC_URL"),
+//       accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
+//     },
+
+//     hoodi: {
+//   type: "http",
+//   chainType: "l1",
+//   url: configVariable("HOODI_URL"),
+//   accounts: [configVariable("HOODI_PRIVATE_KEY")]
+// },
+//   },
+// });
+import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
+import { configVariable, defineConfig } from "hardhat/config";
+import dotenv from "dotenv"
+
+dotenv.config();   // <-- LOAD .env
+
+export default defineConfig({
+  plugins: [hardhatToolboxViemPlugin],
+
+  solidity: {
+    profiles: {
+      default: { version: "0.8.30" },
+      production: {
+        version: "0.8.30",
+        settings: {
+          optimizer: { enabled: true, runs: 200 },
+        },
+      },
+    },
+  },
+
+  networks: {
+    hardhatMainnet: {
+      type: "edr-simulated",
+      chainType: "l1",
+    },
+
+    hardhatOp: {
+      type: "edr-simulated",
+      chainType: "op",
+    },
+
+    localhost: {
+      type: "http",
+      chainType: "generic",
+      url: "http://127.0.0.1:8545/",
+    },
+
+    sepolia: {
+      type: "http",
+      chainType: "l1",
+      url: configVariable("SEPOLIA_RPC_URL"),
+      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
+    },
+
+    hoodi: {
+      type: "http",
+      chainType: "l1",
+      url: configVariable("HOODI_URL"),
+      accounts: [configVariable("HOODI_PRIVATE_KEY")],
+    },
+  },
+});
+
