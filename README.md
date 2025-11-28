@@ -86,10 +86,15 @@ Solidity
 
 
     struct User {
-  string name;
-  string email;
-  bool registered;
-  bool claimed;
+
+        string name;
+
+        string email;
+
+        bool registered;
+
+        bool claimed;
+
 }       
 
 
