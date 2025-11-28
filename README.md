@@ -51,35 +51,39 @@ This project uses Hardhat for smart contract development and deployment, and a R
 📌Hoodi Network (Testnet/Mainnet)
 
 📄License
+
+
 📌This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 
 
 📄Smart Contracts
-The DApp consists of two primary smart contracts:
 
-🎉RewardToken.sol
+🥅 The DApp consists of two primary smart contracts:
 
-🌱An ERC20 token named "QuizRewardToken" with symbol "QRT".
+🎉 RewardToken.sol
 
-🌱Ownable: The contract deployer is the owner.
+🌱 An ERC20 token named "QuizRewardToken" with symbol "QRT".
 
-🌱mintReward(address to, uint256 amount): Allows only the owner to mint new QRT tokens and send them to a specified address. This function is crucial for the QuizReward contract to distribute tokens.
+🌱 Ownable: The contract deployer is the owner.
+
+🌱  mintReward(address to, uint256 amount): Allows only the owner to mint new QRT tokens and send them to a specified address. This function is crucial for the QuizReward contract to distribute tokens.
 
 🧑‍💻QuizReward.sol
 
-🌱Ownable: The contract deployer is the owner.
+🌱 Ownable: The contract deployer is the owner.
 
-🌱token: A public variable storing the address of the deployed RewardToken contract.
+🌱 token: A public variable storing the address of the deployed RewardToken contract.
 
-🌱passMark: The minimum score required to claim a reward (default: 3).
+🌱 passMark: The minimum score required to claim a reward (default: 3).
 
-🌱rewardAmount: The amount of QRT awarded per claim (default: 10 QRT).
+🌱 rewardAmount: The amount of QRT awarded per claim (default: 10 QRT).
 
-🌱users: A public mapping storing User structs, linking an address to their registration and claim status.
+🌱 users: A public mapping storing User structs, linking an address to their registration and claim status.
 
 Solidity
+
 
 struct User {
     string name;
@@ -87,6 +91,9 @@ struct User {
     bool registered;
     bool claimed;
 }
+
+
+
 constructor(): Deploys a new RewardToken contract upon deployment of QuizReward and sets its address.
 
 💡registerUser(string memory name, string memory email): Allows a user to register their details. Requires the user not to be already registered.
@@ -150,40 +157,43 @@ constructor(): Deploys a new RewardToken contract upon deployment of QuizReward 
 
 🔧An account on MetaMask with funds on the Hoodi network 💸
 
+📦 Setup and Installation
 
-🔧Setup and Installation
+
+🔧 1. Clone the Repository
 
 
-🔧Clone the repository:
-
-🔍️git clone <https://github.com/Sreeshna22/QuizReward-DApp.git>
+git clone https://github.com/Sreeshna22/QuizReward-DApp.git cd QuizReward-DApp
 
 
 cd QuizReward-DApp
 
 
 
-🔍️Install Hardhat dependencies:
+🔍 2. Install Hardhat dependencies:
+
 
 npm install
 
 
 
+🔒 3. Configure Environment Variables 
 
-🔍️Configure Environment Variables: Create a .env file in the root of your Hardhat project:
+ Create a .env file in the root of your Hardhat project:
+
 
 HOODI_URL=https://eth-hoodi.g.alchemy.com/v2/E_22OzI2TfxmRHgCa57Kf
 HOODI_PRIVATE_KEY=YOUR_METAMASK_PRIVATE_KEY_HERE
 
 
-
-🔍️Compile Smart Contracts:
+🛠 4. Compile Smart Contracts
 
 
 npx hardhat compile
 
 
-🔍️Deploy Smart Contracts to Hoodi Network:
+🚀 5. Deploy Smart Contracts to Hoodi Network
+
 
 npx hardhat ignition deploy ignition/modules/QuizReward.ts --network hoodi
 
@@ -192,13 +202,16 @@ npx hardhat ignition deploy ignition/modules/QuizReward.ts --network hoodi
 💫Frontend (React)
 
 
-Navigate to the  QuizReward DApp frontend directory:
+6  ♻️ Navigate to the  QuizReward DApp frontend directory:
+
 
 cd  QuizReward DApp fronten
 
 
 
-🚀Update Contract Address in Frontend: Open the following files and replace 0xb015218D8c663319C2c6dFf2AB8E34C6c928AEFB  with the actual QuizReward contract address you obtained during deployment to Hoodi:
+7. 🚀Update Contract Address in Frontend:
+
+ Open the following files and replace 0xb015218D8c663319C2c6dFf2AB8E34C6c928AEFB  with the actual QuizReward contract address you obtained during deployment to Hoodi:
 
 📈pages/ClaimPage.jsx
 
@@ -208,7 +221,7 @@ cd  QuizReward DApp fronten
 
 
 
-🚀Run the Frontend Development Server:
+8. ▶️  Run the Frontend Development Server:
 
 
 
