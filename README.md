@@ -95,7 +95,7 @@ Solidity
 
         bool claimed;
 
-}       
+      }       
 
 
 
