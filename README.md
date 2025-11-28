@@ -85,12 +85,12 @@ This project uses Hardhat for smart contract development and deployment, and a R
 Solidity
 
 
-struct User {
-    string name;
-    string email;
-    bool registered;
-    bool claimed;
-}
+    struct User {
+  string name;
+  string email;
+  bool registered;
+  bool claimed;
+}       
 
 
 
@@ -216,11 +216,11 @@ cd QuizReward-DApp
 
  Open the following files and replace 0xb015218D8c663319C2c6dFf2AB8E34C6c928AEFB  with the actual QuizReward contract address you obtained during deployment to Hoodi:
 
-📈pages/ClaimPage.jsx
+  📈pages/ClaimPage.jsx
 
-📈pages/RegisterPage.jsx
+  📈pages/RegisterPage.jsx
 
-📈pages/SuccessPage.jsx
+  📈pages/SuccessPage.jsx
 
 
 
