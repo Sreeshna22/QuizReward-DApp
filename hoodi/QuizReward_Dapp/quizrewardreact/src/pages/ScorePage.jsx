@@ -1,62 +1,3 @@
-// import { Link, useLocation } from "react-router-dom";
-
-// export default function ScorePage() {
-//   const { state } = useLocation();
-//   const score = state?.score ?? 0;
-
-//   return (
-//     <div className="text-center p-10">
-//       <h1 className="text-4xl font-bold">Your Score: {score}</h1>
-
-//       <Link
-//         to="/claim"
-//         state={{ score }}
-//         className="text-red-600 underline text-xl mt-6 block"
-//       >
-//         Claim Reward →
-//       </Link>
-//     </div>
-//   );
-// }
-// import { Link, useLocation } from "react-router-dom";
-
-// export default function ScorePage() {
-//   const { state } = useLocation();
-//   const score = state?.score ?? 0;
-
-//   return (
-//     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100 p-6">
-
-//       <div className="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-md border-t-4 border-red-600 text-center animate-fadeIn">
-
-//         {/* Score Title */}
-//         <h1 className="text-3xl font-extrabold text-gray-800 mb-4">
-//           Quiz Completed!
-//         </h1>
-
-//         {/* Animated Score */}
-//         <p className="text-6xl font-black text-red-600 mb-6 animate-bounce">
-//           {score}
-//         </p>
-
-//         <p className="text-lg text-gray-600 mb-10">
-//           You did great! Claim your reward now.
-//         </p>
-
-//         {/* Claim Button */}
-//         <Link
-//           to="/claim"
-//           state={{ score }}
-//           className="px-6 py-3 bg-red-600 text-white font-semibold text-lg rounded-xl shadow-lg 
-//             hover:bg-red-700 hover:scale-105 transition transform inline-block"
-//         >
-//           Claim Reward →
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// }
-
 
 
 import { Link, useLocation } from "react-router-dom";
@@ -70,7 +11,7 @@ export default function ScorePage() {
 
   const score = state?.score ?? 0;
 
-  const passMark = 3; // Match your smart contract
+  const passMark = 3; 
 
 
 
@@ -87,7 +28,7 @@ export default function ScorePage() {
 
 
 
-      {/* Decorative floating circles */}
+ 
 
       <div className="absolute top-[-80px] left-[-80px] w-72 h-72 bg-red-400 rounded-full opacity-20 animate-pulse"></div>
 
@@ -101,7 +42,7 @@ export default function ScorePage() {
 
 
 
-        {/* Score Title */}
+ 
 
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
 
@@ -112,7 +53,7 @@ export default function ScorePage() {
 
 
 
-        {/* Animated Score */}
+   
 
         <p className={`text-6xl md:text-7xl font-black mb-6 ${passed ? "text-red-600 animate-pulse" : "text-gray-400"}`}>
 
@@ -123,7 +64,7 @@ export default function ScorePage() {
 
 
 
-        {/* Pass/Fail Message */}
+     
 
         {passed ? (
 
@@ -146,7 +87,7 @@ export default function ScorePage() {
 
 
 
-        {/* Claim Button */}
+        
 
         {passed && (
 
